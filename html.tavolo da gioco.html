@@ -7,39 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <style>
-        img {
-            width: 100px;
-        }
-        .item1 { grid-area: header; }
-        .item2 { grid-area: menu; }
-        .item3 { grid-area: main; }
-            
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu main main main right right'
-    'menu footer footer footer footer footer';
-  gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-    </style>
+    
 </head>
 
 <body>
 
-    <div id="tavoloDaGioco"></div>
-       
+   <div id="tavoloDaGioco"></div>
+    <div class="container">
+<span id="contatore" class="contatore">0</span>
+    </div>
+        
     <script>
 
 
@@ -75,7 +52,9 @@
                 }
 
             }
+            contatore.textContent = conto;
         }
+       
                  
     </script>
 
