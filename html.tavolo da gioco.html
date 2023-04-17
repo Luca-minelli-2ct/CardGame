@@ -7,22 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
 </head>
 
 <body>
-
-   <div id="tavoloDaGioco"></div>
     <div class="container">
-<span id="contatore" class="contatore">0</span>
+        <span class="counter">score=</span><span id="counter" class="counter">0</span>
     </div>
-        
+    <!--div  ci permette di visualizzare i contenuti presenti nel documento nel documento-->
+    <div id="tavoloDaGioco"></div>
+
+
     <script>
-
-
-
-        carte = ["carta-4.png", "carta-8.jpg","carta-2-pokemon.png","carta-4.png","carta-8.jpg","carta-2-pokemon.png","carta3.png","carta-7.webp","carta3.png","carta-7.webp"]
-        let NcarteGirate = 0
+        carte = ["carta-4.png", "carta-4.png", "carta-5.png", "carta-5.png", "carta-6.jpg", "carta-6.jpg","carta-8.jpg","carta-2-pokemon.png","carta-8.jpg","carta-2-pokemon.png",]
+        let NcarteGirate = 0;
         let primaCartaGirata = null
         tavolo = document.querySelector('#tavoloDaGioco')
 
@@ -30,37 +32,34 @@
             tavolo.innerHTML += '<img id="' + element + '" src="pokemon-card-back.png" onclick="gira(this)" />'
             console.log('<img id="' + element + '" src="pokemon-card-back.png" />')
         });
-
-
+        var counter = document.getElementById("counter");
+        var count = 0;
+        //è la nostra variabile che ci fa avere lo score iniziale pari a  0 -->
         function gira(carta) {
             NcarteGirate++
             console.log(NcarteGirate)
             carta.src = carta.id
             if (NcarteGirate == 1)
                 primaCartaGirata = carta
+                 //è la variabile che ci fa aumentare il punteggio schiaccando 2 carte uguali//
             else {
                 NcarteGirate = 0
-                if (carta.src == primaCartaGirata.src)
-                    console.log('Bravo +1 punto')
-                else {
-                    console.log('Riprovaci')
-
-                    setTimeout(() => {
-                        carta.src = "pokemon-card-back.png"
-                        primaCartaGirata.src = "pokemon-card-back.png"
-                    }, 20)
+                if (carta.src == primaCartaGirata.src) {
+                    count++;
+                    counter.textContent = count;
+                
+                } else {
+                    setTimeout(function() {
+                        carta.src = "pokemon-card-back.png";
+                        primaCartaGirata.src = "pokemon-card-back.png";
+                    }, 1000);
                 }
-
             }
-            contatore.textContent = conto;
         }
-       
-                 
+
+
     </script>
-
-    
-
 </body>
 
-
 </html>
+
