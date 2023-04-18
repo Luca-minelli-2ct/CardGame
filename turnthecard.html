@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gira la carta</title>
+</head>
+
+<body>
+    <img src="pokemon-card-back.png" onclick="gira()" width="300" />
+    <img class="carta1"src="pokemon-card-back.png" onclick="gira1()" width="300" />
+    <img class="carta2"src="pokemon-card-back.png" onclick="gira2()" width="300" />
+    <img class="carta3"src="pokemon-card-back.png" onclick="gira3()" width="300" />
+    <img class="carta4"src="pokemon-card-back.png" onclick="gira4()" width="300" />
+    <img class="carta5"src="pokemon-card-back.png" onclick="gira5()" width="300" />
+    <img class="carta6"src="pokemon-card-back.png" onclick="gira6()" width="300" />
+    <img class="carta7"src="pokemon-card-back.png" onclick="gira7()" width="300" />
+    <img class="carta8"src="pokemon-card-back.png" onclick="gira8()" width="300" />
+    <img class="carta9"src="pokemon-card-back.png" onclick="gira9()" width="300" />
+
+
+
+ <script>
+
+        let carta = document.querySelector("img")
+        function gira() {
+            console.log("gira")
+
+            if (carta.src.includes('back'))
+                carta.src = "pokemon-card-front.png";
+            else
+                carta.src = "pokemon-card-back.png";
+
+
+        }
+        let carta1 = document.querySelector(".carta1")
+        function gira1() {
+            console.log("gira")
+
+            if (carta1.src.includes('back'))
+                carta1.src = "carta-2-pokemon.png";
+            else
+                carta1.src = "pokemon-card-back.png";
+
+
+        }
+        let carta2 = document.querySelector(".carta2")
+        function gira2() {
+            console.log("gira")
+
+            if (carta2.src.includes('back'))
+                carta2.src = "carta3.png";
+            else
+                carta2.src = "pokemon-card-back.png";
+
+
+        }
+        let carta3 = document.querySelector(".carta3")
+        function gira3() {
+            console.log("gira")
+
+            if (carta3.src.includes('back'))
+                carta3.src = "carta-4.png";
+            else
+                carta3.src = "pokemon-card-back.png";
+
+
+        }
+        let carta4 = document.querySelector(".carta4")
+        function gira4() {
+            console.log("gira")
+
+            if (carta4.src.includes('back'))
+                carta4.src = "carta-5.png";
+            else
+                carta4.src = "pokemon-card-back.png";
+
+
+        }
+        let carta5 = document.querySelector(".carta5")
+        function gira5() {
+            console.log("gira")
+
+            if (carta5.src.includes('back'))
+                carta5.src = "carta-6.jpg";
+            else
+                carta5.src = "pokemon-card-back.png";
+
+
+        } let carta6 = document.querySelector(".carta6")
+        function gira6() {
+            console.log("gira")
+
+            if (carta6.src.includes('back'))
+                carta6.src = "carta-7.webp";
+            else
+                carta6.src = "pokemon-card-back.png";
+
+            } let carta7 = document.querySelector(".carta7")
+        function gira7() {
+            console.log("gira")
+
+            if (carta7.src.includes('back'))
+                carta7.src = "carta-8.jpg";
+            else
+                carta7.src = "pokemon-card-back.png";
+
+
+        }
+        let carta8 = document.querySelector(".carta8")
+        function gira8() {
+            console.log("gira")
+
+            if (carta8.src.includes('back'))
+                carta8.src = "carta-9.png";
+            else
+                carta8.src = "pokemon-card-back.png";
+
+
+        }let carta9 = document.querySelector(".carta9")
+        function gira9() {
+            console.log("gira")
+
+            if (carta9.src.includes('back'))
+                carta9.src = "carta-10.jpg";
+            else
+                carta9.src = "pokemon-card-back.png";
+
+
+        }
+    </script>
+
+    
+</body>
+
+</html>

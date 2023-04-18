@@ -11,6 +11,12 @@
         img {
             width: 300px;
         }
+        p {
+            font-size: 50px;
+        }
+        .counter {
+            font-size: 50px;
+        }
     </style>
 </head>
 
@@ -23,7 +29,7 @@
 
 
     <script>
-        carte = ["carta-4.png", "carta-4.png", "carta-5.png", "carta-5.png", "carta-6.jpg", "carta-6.jpg","carta-8.jpg","carta-2-pokemon.png","carta-8.jpg","carta-2-pokemon.png",]
+        carte = ["carta-4.png","carta-10.jpg","carta-9.png","carta3.png","carta-8.jpg","carta-6.jpg","carta-2-pokemon.png","carta3.png","carta-8.jpg","carta-4.png","carta-10.jpg","carta-9.png","carta-6.jpg","carta-2-pokemon.png"]
         let NcarteGirate = 0;
         let primaCartaGirata = null
         tavolo = document.querySelector('#tavoloDaGioco')
@@ -55,6 +61,12 @@
                     }, 1000);
                 }
             }
+            counter.textContent = count;
+            if (count == 7) {
+            var p = document.createElement("p");
+            p.textContent = "Hai vinto";
+            document.body.appendChild(p);
+        }
         }
 
 
@@ -62,4 +74,3 @@
 </body>
 
 </html>
-
