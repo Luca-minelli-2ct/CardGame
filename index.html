@@ -35,7 +35,11 @@
         tavolo = document.querySelector('#tavoloDaGioco')
 
 
+
         carte.sort (() => Math.random() - 0.5);
+
+
+
 
 
         carte.forEach(element => {
@@ -66,7 +70,7 @@
                 }
             }
             counter.textContent = count;
-            if (count == 7) {
+            if (count == 7 ) {
             var p = document.createElement("p");
             p.textContent = "Hai vinto";
             document.body.appendChild(p);
