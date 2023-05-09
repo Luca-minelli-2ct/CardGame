@@ -34,6 +34,9 @@
         let primaCartaGirata = null
         tavolo = document.querySelector('#tavoloDaGioco')
 
+         carte.sort (() => Math.random() - 0.5);
+        
+        
         carte.forEach(element => {
             tavolo.innerHTML += '<img id="' + element + '" src="pokemon-card-back.png" onclick="gira(this)" />'
             console.log('<img id="' + element + '" src="pokemon-card-back.png" />')
